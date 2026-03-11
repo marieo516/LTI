@@ -65,12 +65,11 @@ load.php          # Loads saved cards
 
 ## Mobile demo
 
-![Mobile demo image. Closed "add" menu.](demo_images/mobile_lti_demo.jpg)
-
-![Mobile demo image. Opened "add" menu.](demo_images/mobile_lti_demo2.jpg)
+<img src="demo_images/mobile_lti_demo.jpg" width="45%" style="margin-right: 5%;">
+<img src="demo_images/mobile_lti_demo2.jpg" width="45%">
 
 ---
 
 ## Desktop demo
 
-![Desktop demo image.](demo_images/pc_lti_demo.jpg)
+![Desktop demo image.](demo_images/pc_lti_demo.png)
