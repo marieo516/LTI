@@ -65,8 +65,10 @@ load.php          # Loads saved cards
 
 ## Mobile demo
 
-<img src="demo_images/mobile_lti_demo.jpg" width="45%" style="margin-right: 5%;">
-<img src="demo_images/mobile_lti_demo2.jpg" width="45%">
+<p align="center">
+  <img src="demo_images/mobile_lti_demo.jpg" width="45%">
+  <img src="demo_images/mobile_lti_demo2.jpg" width="45%">
+</p>
 
 ---
 
