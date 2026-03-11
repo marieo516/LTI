@@ -60,3 +60,17 @@ load.php          # Loads saved cards
 - Auto-refresh of `(X days ago)`
 - Implement use of different users for others in the home
 - Automatic reduction of saved dates in the files to keep it lightweight
+
+---
+
+## Mobile demo
+
+![Mobile demo image. Closed "add" menu.](demo_images/mobile_lti_demo.jpg)
+
+![Mobile demo image. Opened "add" menu.](demo_images/mobile_lti_demo2.jpg)
+
+---
+
+## Desktop demo
+
+![Desktop demo image.](demo_images/pc_lti_demo.jpg)
