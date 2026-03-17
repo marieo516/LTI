@@ -66,12 +66,12 @@ input {
 
 /* Cards */
 .cardLTI {
-  background-color: #1a2630;
-  padding: 15px;
-  border-radius: 6px;
+    background-color: #1a2630;
+    padding: 15px;
+    border-radius: 6px;
 
-  display: block;
-  margin-top: 20px;  
+    display: block;
+    margin-top: 20px;
 }
 
 .cardHeader {
@@ -85,6 +85,11 @@ input {
   margin: 0;
 }
 
+.cardActions {
+    display: flex;
+    gap: 8px;
+}
+
 .lt {
   margin: 0;
   font-style: italic;
@@ -95,4 +100,10 @@ input {
   margin-left: 6px;
   font-style: normal;
   opacity: 0.7;
+}
+
+.actionMenu {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
 }

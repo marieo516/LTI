@@ -28,7 +28,10 @@ function generateCard(id, cardTitle, date) {
     card.innerHTML = `
         <div class="cardHeader">
             <h4>${cardTitle}</h4>
-            <button class="dateUpdate">+</button>
+            <div class="cardActions">
+                <button class="menuBtn">...</button>
+                <button class="dateUpdate">+</button>
+            </div>
         </div>
 
         <p class="lt">
@@ -36,8 +39,54 @@ function generateCard(id, cardTitle, date) {
         </p>
     `;
 
-    const btn = card.querySelector('.dateUpdate');
-    btn.addEventListener('click', () => {
+    // Manage menu (... button)
+    const menuBtn = card.querySelector('.menuBtn');
+    menuBtn.addEventListener('click', () => {
+        const existing = document.querySelector('.actionMenu');
+        if (existing) {
+            existing.remove();
+            return;
+        }
+
+        const container = document.createElement('div');
+        container.className = 'actionMenu';
+
+        const btnDelete = document.createElement('button');
+        btnDelete.textContent = 'Delete';
+
+        const btnBack = document.createElement('button');
+        btnBack.textContent = 'Back';
+
+        container.append(btnDelete, btnBack);
+
+        card.insertAdjacentElement('afterend', container);
+
+        btnDelete.onclick = () => {
+            const dataToSend = new FormData();
+            dataToSend.append('action', 'delete');
+            dataToSend.append('name', card.id);
+
+            fetch('save.php', {
+                method: 'POST',
+                body: dataToSend
+            }).then(() => location.reload());
+        };
+
+        btnBack.onclick = () => {
+            const dataToSend = new FormData();
+            dataToSend.append('action', 'undo');
+            dataToSend.append('name', card.id);
+
+            fetch('save.php', {
+                method: 'POST',
+                body: dataToSend
+            }).then(() => location.reload());
+        };
+    });  
+
+    // Manage date update (+ button)
+    const updateBtn = card.querySelector('.dateUpdate');
+    updateBtn.addEventListener('click', () => {
         const newDate = getCurrentDate();
         const dateP = card.querySelector('.lt');
         const agoSpan = card.querySelector('.ago');
@@ -48,6 +97,7 @@ function generateCard(id, cardTitle, date) {
 
         // Update file
         const dataUpdate = new FormData();
+        dataUpdate.append('action', 'update');
         dataUpdate.append('name', id);
         dataUpdate.append('date', newDate);
 
