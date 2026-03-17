@@ -66,8 +66,8 @@ load.php          # Loads saved cards
 ## Mobile demo
 
 <p align="center">
-  <img src="demo_images/mobile_lti_demo.jpg" width="45%">
-  <img src="demo_images/mobile_lti_demo2.jpg" width="45%">
+  <img src="demo_images/mobile_lti_demo.png" width="45%">
+  <img src="demo_images/mobile_lti_demo2.png" width="45%">
 </p>
 
 ---
@@ -75,3 +75,4 @@ load.php          # Loads saved cards
 ## Desktop demo
 
 ![Desktop demo image.](demo_images/pc_lti_demo.png)
+![Desktop demo image.](demo_images/pc_lti_demo2.png)
